@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WiFi Setup</title>
+	</head>
+	<body>
+		<h2>Connect Module to WiFi</h2>
+		<p>
+			Enter the network name (SSID) and password of your WiFi network for
+			the module to connect to WiFi and send emergency notifications.
+		</p>
+		<form action="/wifi" method="post">
+			<label for="ssid">WiFi SSID</label>
+			<br />
+			<input type="text" name="ssid" placeholder="WiFi SSID" />
+			<br />
+			<br />
+			<label for="ssid">WiFi Password</label>
+			<br />
+			<input
+				type="password"
+				name="password"
+				placeholder="WiFi Password"
+			/>
+			<br />
+			<br />
+			<button type="submit">Connect</button>
+		</form>
+	</body>
+</html>
