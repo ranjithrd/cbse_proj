@@ -54,6 +54,8 @@ app.post("/leak", (req, res) => {
     res.send(500)
 })
 
+app.get("/", (_, res) => res.send("<h2>Server running</h2>"))
+
 // const client = new mongo.MongoClient(process.env.MONGO_URL)
 
 async function main() {
