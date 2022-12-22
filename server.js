@@ -20,8 +20,8 @@ function sendTwilioMessage(phoneNumber) {
 	client.messages
 		.create({
 			body: "*ALERT!* Sensor has detected gas leakage at your home. Please check your cylinder or call emergency services at 112 if necessary.",
-			from: "whatsapp:+14155238886",
-			to: `whatsapp:${phoneNumber}`,
+			messagingServiceSid: "MGc8865098a082855b37045087d9e652f3",
+			to: `${phoneNumber}`,
 		})
 		.then((message) =>
 			console.log("Message sent to ", phoneNumber, " SID ", message.sid)
@@ -47,11 +47,11 @@ app.post("/leak", (req, res) => {
 
 	if (phone != "") {
 		sendTwilioMessage(phone)
-        res.send(200)
-        return
+		res.send(200)
+		return
 	}
 
-    res.send(500)
+	res.send(500)
 })
 
 app.get("/", (_, res) => res.send("<h2>Server running</h2>"))
